@@ -1,0 +1,63 @@
+<style lang="less">
+
+.emoji-view {
+  margin-top: 200px;
+  background-color: #ff0;
+}
+
+.emoji-img {
+  width: 20px;
+  height: 20px;
+}
+
+</style>
+
+<template>
+  <view
+    class="emoji-view"
+    @tap="bindtap"
+  >
+    <repeat for="{{config.emotions}}" key="index" index="index" item="item">
+
+      <image src="{{item.url}}" class="emoji-img" data-emotion="{{item}}" />
+    </repeat>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import config from './config'
+
+  export default class Emoji extends wepy.component {
+    props = {
+      value: {
+        type: String,
+        default: ''
+      },
+
+      config: {
+        type: String,
+        default: config
+      }
+    }
+
+    methods = {
+      bindtap (e) {
+
+        var emotion = e.target.dataset.emotion
+
+
+        if (emotion) {
+
+          var prefixedValue = config.setPrefix(emotion.value)
+          this.$emit('emoji-input', {
+            inputValue: this.value + config.setPrefix(emotion.value),
+            emojiValue: emotion.value,
+            emojiPrefixedValue: prefixedValue,
+            url: emotion.url
+          })
+        }
+      }
+    }
+  }
+</script>
