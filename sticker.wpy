@@ -1,0 +1,159 @@
+<style lang="less">
+
+.emotion-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: #fff;
+
+  .emotion-top {
+    display: flex;
+    flex-grow: 1;
+
+    swiper {
+      flex-grow: 1;
+      height: initial;
+    }
+
+    swiper-item {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 42rpx;
+      height: initial !important;
+    }
+
+    .emotion-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 91rpx;
+      width: 14.285%;
+
+      .emotion-img {
+        width: 51.3rpx;
+        height: 51.3rpx;
+      }
+    }
+  }
+
+  .emotion-bottom {
+    display: flex;
+    height: 50rpx;
+    background: #f8f8f8;
+    box-shadow: 0 -1px 2px 0 rgba(0,0,0,.1);
+
+    .emotion-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 75rpx;
+
+      &.active {
+        background: #dedede;
+      }
+
+      image {
+        width: 37rpx;
+        height: 37rpx;
+      }
+    }
+  }
+}
+
+</style>
+
+<template>
+  <view class="emotion-container">
+    <view class="emotion-top">
+      <swiper
+        indicator-dots="{{indicatorDots}}"
+        indicator-color="#cacaca"
+        indicator-active-color="#0079ff"
+        current="{{swiperCurrent[activeGroup] || 0}}"
+        @change="handleSwiperChange"
+      >
+        <repeat for="{{activeEmotions.pages}}" key="index" item="emotions">
+          <swiper-item>
+
+            <repeat for="{{emotions}}" key="index" item="emotionItem">
+              <view class="emotion-item" @tap="handleEmotionItemTap({{emotionItem.key}})">
+                <image src="{{emotionItem.url}}" class="emotion-img"/>
+              </view>
+            </repeat>
+
+          </swiper-item>
+        </repeat>
+      </swiper>
+    </view>
+
+    <view class="emotion-bottom">
+      <repeat for="{{emotions}}" key="index" item="item">
+        <view class="{{index === activeGroup ? 'emotion-tab active' : 'emotion-tab'}}" @tap="handleTabChange({{index}})">
+          <image src="{{item.icon}}"/>
+        </view>
+      </repeat>
+    </view>
+
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Emotion extends wepy.component {
+    data = {
+      activeGroup: 0,
+      indicatorDots: true,
+      swiperCurrent: {}
+    }
+
+    props = {
+      config: {
+        type: Object
+      },
+
+      numPerSwiper: {
+        type: Number,
+        default: 21
+      }
+    }
+
+    computed = {
+      activeEmotions () {
+        var active = this.config.filter((v, i) => this.activeGroup === i)[0]
+        var page = Math.ceil(active.emotions.length / this.numPerSwiper)
+        active.pages = []
+        for (var i = 0; i < page; i++) {
+          active.pages.push(active.emotions.slice(i * this.numPerSwiper, i * this.numPerSwiper + this.numPerSwiper))
+        }
+        return active
+      },
+
+      emotions () {
+        return this.config
+      }
+    }
+
+    methods = {
+      handleTabChange (idx) {
+        this.activeGroup = idx
+      },
+
+      handleEmotionItemTap (key) {
+        var item = this.activeEmotions.emotions.filter(v => key === v.key)[0]
+        item.wrappedKey = this.activeEmotions.getUniqueWrap(item.key)
+        item.groupKey = this.config[this.activeGroup]['key']
+
+        this.$emit('wepy-sticker-tap', item)
+      },
+
+      handleSwiperChange (e) {
+        this.swiperCurrent[this.activeGroup] = e.detail.current
+      }
+    }
+  }
+
+</script>
