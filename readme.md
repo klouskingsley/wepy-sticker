@@ -1,5 +1,8 @@
-# wepy-sticker 小程序表情包组件
+# wepy-sticker
 
+小程序表情包组件
+
+![screenshot](https://raw.githubusercontent.com/klouskingsley/wepy-sticker/master/screenshots/1.gif)
 ## Install 安装
 
 ```
