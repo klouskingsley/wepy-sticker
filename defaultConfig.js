@@ -460,89 +460,89 @@ var eiGroup = {
 
 var aodaomiaoGroup = {
     key: 'adm',
-    icon: '',
+    icon: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/icon.jpg',
     size: 'lg',
     getUniqueWrap: function (v) {
         return '[adm_' + v + ']'
     },
     emotions: [
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/5b8d2c076f49bf178f4138e88a31f05c.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/5b8d2c076f49bf178f4138e88a31f05c.gif',
             key: '1',
             title: '卖萌'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/39d17dde69a1008ef2b9bbdd19c36fd4.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/39d17dde69a1008ef2b9bbdd19c36fd4.gif',
             key: '2',
             title: '害羞'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/fd2e2e1be97bc99a1ccf87f186f5874a.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/fd2e2e1be97bc99a1ccf87f186f5874a.gif',
             key: '3',
             title: '哭'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/6759744b646252965898cad6201d6496.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/6759744b646252965898cad6201d6496.gif',
             key: '4',
             title: '跳舞'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/25372cd25a37d70c9235853b4d41be25.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/25372cd25a37d70c9235853b4d41be25.gif',
             key: '5',
             title: '汗'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/7d790b7e13e5eb379737fd52657bea42.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/7d790b7e13e5eb379737fd52657bea42.gif',
             key: '6',
             title: '嗨起来'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/6a2030a7ef17083a09064ddca751a5fa.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/6a2030a7ef17083a09064ddca751a5fa.gif',
             key: '7',
             title: '奸笑'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/8014819ff08a19df9039e6239a3d4b2a.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/8014819ff08a19df9039e6239a3d4b2a.gif',
             key: '8',
             title: '开心'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/d3f25b31977602324f5d8f1d924692d9.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/d3f25b31977602324f5d8f1d924692d9.gif',
             key: '9',
             title: '打滚'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/17277a39695fe5771c6682d9bef3aa3c.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/17277a39695fe5771c6682d9bef3aa3c.gif',
             key: '10',
             title: '赞'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/edaaea9499051ff66d4652cfbd342bb3.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/edaaea9499051ff66d4652cfbd342bb3.gif',
             key: '11',
             title: '大笑'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/cea27196e5c95e6c9dc619ed0d780f73.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/cea27196e5c95e6c9dc619ed0d780f73.gif',
             key: '12',
             title: '给跪了'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/2fdfe11a584f658a3bfe75b38ae279a7.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/2fdfe11a584f658a3bfe75b38ae279a7.gif',
             key: '13',
             title: '拍桌'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/c0594078a6370a39e7df4d549f0bea2b.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/c0594078a6370a39e7df4d549f0bea2b.gif',
             key: '14',
             title: '挖鼻孔'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/13161c6ea25c8cb4a3af2581e67c3820.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/13161c6ea25c8cb4a3af2581e67c3820.gif',
             key: '15',
             title: '无语'
         },
         {
-            url: 'https://raw.githubusercontent.com/thomasxu1991/WeChat-Emoticon/master/%E5%97%B7%E5%A4%A7%E5%96%B5/621a8c9cbdbb60ab4064c87886e9e8d1.gif',
+            url: 'https://raw.githubusercontent.com/klouskinsley/wepy-sticker/add-large-emotion/imgs/aodamiao/emotions/621a8c9cbdbb60ab4064c87886e9e8d1.gif',
             key: '16',
             title: '震惊'
         },
