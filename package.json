@@ -1,6 +1,6 @@
 {
   "name": "wepy-sticker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "sticker for wechat mini program, 微信小程序表情包组件",
   "main": "sticker.wpy",
   "scripts": {

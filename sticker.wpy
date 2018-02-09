@@ -29,12 +29,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 91rpx;
-      width: 14.285%;
 
-      .emotion-img {
-        width: 51.3rpx;
-        height: 51.3rpx;
+      &.emotion-item-lg {
+        width: 25%;
+        height: 150rpx;
+
+        .emotion-img {
+          width: 140rpx;
+          height: 140rpx;
+        }
+      }
+
+      &.emotion-item-sm {
+        width: 14.285%;
+        height: 91rpx;
+
+        .emotion-img {
+          width: 51.3rpx;
+          height: 51.3rpx;
+        }
       }
     }
   }
@@ -79,7 +92,7 @@
           <swiper-item>
 
             <repeat for="{{emotions}}" key="index" item="emotionItem">
-              <view class="emotion-item" @tap="handleEmotionItemTap({{emotionItem.key}})">
+              <view class="{{'emotion-item ' + 'emotion-item-' + activeEmotions.size}}" @tap="handleEmotionItemTap({{emotionItem.key}})">
                 <image src="{{emotionItem.url}}" class="emotion-img"/>
               </view>
             </repeat>
@@ -103,6 +116,11 @@
 <script>
   import wepy from 'wepy'
 
+  const site2num = {
+    sm: 21,
+    lg: 8
+  }
+
   export default class Emotion extends wepy.component {
     data = {
       activeGroup: 0,
@@ -113,21 +131,17 @@
     props = {
       config: {
         type: Object
-      },
-
-      numPerSwiper: {
-        type: Number,
-        default: 21
       }
     }
 
     computed = {
       activeEmotions () {
         var active = this.config.filter((v, i) => this.activeGroup === i)[0]
-        var page = Math.ceil(active.emotions.length / this.numPerSwiper)
+        var num = site2num[active.size]
+        var page = Math.ceil(active.emotions.length / num)
         active.pages = []
         for (var i = 0; i < page; i++) {
-          active.pages.push(active.emotions.slice(i * this.numPerSwiper, i * this.numPerSwiper + this.numPerSwiper))
+          active.pages.push(active.emotions.slice(i * num, i * num + num))
         }
         return active
       },
