@@ -1,6 +1,6 @@
 {
   "name": "wepy-sticker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "sticker for wechat mini program, 微信小程序表情包组件",
   "main": "sticker.wpy",
   "scripts": {
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klouskingsley/wechat-emotion.git"
+    "url": "git+https://github.com/klouskingsley/wepy-sticker.git"
   },
   "keywords": [
     "wechat",
@@ -25,9 +25,9 @@
   "author": "klouskingsley",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/klouskingsley/wechat-emotion/issues"
+    "url": "https://github.com/klouskingsley/wepy-sticker/issues"
   },
-  "homepage": "https://github.com/klouskingsley/wechat-emotion#readme",
+  "homepage": "https://github.com/klouskingsley/wepy-sticker#readme",
   "peerDependencies": {
     "wepy": "*"
   }
